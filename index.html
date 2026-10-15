@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1118">
+  <meta name="description" content="CoreFair — Your Business. Your Posts. Your Community.">
+  <title>CoreFair — Business Community</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="CoreFair home">
+      <img src="assets/corefair-logo.png" alt="CoreFair CF logo" class="brand-mark">
+      <span>CoreFair</span>
+    </a>
+    <nav class="topnav" aria-label="Main navigation">
+      <button class="nav-link active" data-view="home">Home</button>
+      <button class="nav-link" data-view="posts">Posts</button>
+      <button class="nav-link" data-view="business">Business</button>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+    <label class="searchbox">
+      <span aria-hidden="true">⌕</span>
+      <input id="searchInput" type="search" placeholder="Search posts, products, services…" aria-label="Search posts">
+    </label>
+    <div class="top-actions">
+      <button class="btn btn-ghost" id="loginBtn">Login</button>
+      <button class="btn btn-dark" id="signupBtn">Sign Up</button>
+      <button class="icon-btn mobile-menu" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> CONNECT · SHARE · GROW</div>
+        <div class="hero-brand">
+          <img src="assets/corefair-logo.png" alt="" class="hero-logo">
+          <h1>CoreFair</h1>
+        </div>
+        <h2>Your Business. Your Posts. Your Community.</h2>
+        <p>Share your business updates, products, services and ideas. Connect with people who help your business move forward.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-dark btn-large" id="getStartedBtn">Get Started <span>→</span></button>
+          <button class="btn btn-light btn-large" id="exploreBtn">Explore Posts</button>
+        </div>
+        <div class="hero-proof"><span class="proof-avatars"><i>C</i><i>B</i><i>+</i></span><span>Made for ambitious businesses and creators</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-note">Build your brand<br>with CoreFair <span>↙</span></div>
+        <div class="desk-scene">
+          <div class="plant"><span></span><span></span><span></span><b></b></div>
+          <div class="laptop"><div class="laptop-screen"><img src="assets/corefair-logo.png" alt=""><small>CoreFair</small></div><div class="laptop-base"></div></div>
+          <div class="mug"><img src="assets/corefair-logo.png" alt=""><small>CoreFair</small></div>
+          <div class="notebook"></div><div class="pen"></div>
+        </div>
+      </div>
+      <aside class="login-card">
+        <h3>Welcome to CoreFair</h3>
+        <p class="muted">Sign in to your business community.</p>
+        <form id="heroLoginForm">
+          <label class="field"><span>✉</span><input name="email" type="email" placeholder="Email address" required></label>
+          <label class="field"><span>♙</span><input name="password" type="password" placeholder="Password" required minlength="4"></label>
+          <div class="form-row"><label class="check"><input type="checkbox"> Remember me</label><button type="button" class="text-btn" id="forgotBtn">Forgot password?</button></div>
+          <button class="btn btn-dark full-width" type="submit">Login</button>
+        </form>
+        <div class="or"><span>OR</span></div>
+        <button class="btn btn-outline full-width" id="googleBtn"><span class="google-g">G</span> Continue with Google</button>
+        <p class="login-foot">Don't have an account? <button class="text-btn" id="heroSignupBtn">Sign Up</button></p>
+      </aside>
+    </section>
+
+    <section class="benefits" aria-label="CoreFair benefits">
+      <article><span class="benefit-icon">♧</span><div><b>Share Your Business</b><small>Showcase your products & services</small></div></article>
+      <article><span class="benefit-icon">♧</span><div><b>Grow Together</b><small>Connect with like-minded people</small></div></article>
+      <article><span class="benefit-icon">◇</span><div><b>Build Your Network</b><small>Find partners and opportunities</small></div></article>
+      <article><span class="benefit-icon">↗</span><div><b>Get More Exposure</b><small>Reach new audiences</small></div></article>
+    </section>
+
+    <section class="workspace" id="posts">
+      <aside class="profile-sidebar panel">
+        <div class="mini-profile"><div class="avatar avatar-logo"><img src="assets/corefair-logo.png" alt=""></div><div><b id="sidebarName">CoreFair</b><small id="sidebarHandle">@corefair</small></div></div>
+        <div class="side-menu">
+          <button class="side-link selected" data-view="home"><span>⌂</span> Home</button>
+          <button class="side-link" data-view="my-posts"><span>▤</span> My Posts</button>
+          <button class="side-link" data-view="messages"><span>✉</span> Messages <i class="count">3</i></button>
+          <button class="side-link" data-view="notifications"><span>♧</span> Notifications <i class="count">5</i></button>
+          <button class="side-link" data-view="business"><span>▣</span> Business</button>
+          <button class="side-link" data-view="profile"><span>♙</span> Profile</button>
+          <button class="side-link" data-view="settings"><span>⚙</span> Settings</button>
+        </div>
+        <div class="sidebar-cta"><b>Create your first post</b><p>Share your business, product or idea with the community.</p><button class="btn btn-light btn-small" id="sidebarCreateBtn">Create Post ↗</button></div>
+      </aside>
+
+      <section class="feed panel">
+        <div class="feed-header">
+          <div><h2 id="feedTitle">Latest Posts</h2><p class="muted" id="feedSubtitle">Discover updates, offers and insights from our community.</p></div>
+          <button class="btn btn-dark" id="createPostBtn">＋ Create Post</button>
+        </div>
+        <div class="filter-row" id="filterRow">
+          <button class="filter active" data-filter="All">All</button>
+          <button class="filter" data-filter="Business">Business</button>
+          <button class="filter" data-filter="Products">Products</button>
+          <button class="filter" data-filter="Services">Services</button>
+          <button class="filter" data-filter="Offers">Offers</button>
+          <button class="filter" data-filter="Tips">Tips</button>
+          <button class="filter" data-filter="Updates">Updates</button>
+        </div>
+        <div class="post-list" id="postList"></div>
+        <div class="empty-state hidden" id="emptyState"><div>⌕</div><h3>No posts found</h3><p>Try another search or category, or create the first post.</p><button class="btn btn-dark" id="emptyCreateBtn">Create a Post</button></div>
+      </section>
+
+      <aside class="right-sidebar">
+        <section class="panel why-panel">
+          <h3>Why CoreFair?</h3>
+          <article><span>↗</span><div><b>Share Your Business</b><small>Showcase your products & services</small></div></article>
+          <article><span>▥</span><div><b>Get More Exposure</b><small>Reach new customers</small></div></article>
+          <article><span>♟</span><div><b>Build Your Network</b><small>Connect with people</small></div></article>
+          <article><span>♥</span><div><b>Grow Together</b><small>Support and get support</small></div></article>
+        </section>
+        <section class="join-card">
+          <div class="join-logo"><img src="assets/corefair-logo.png" alt=""></div>
+          <h3>Join CoreFair Today</h3>
+          <p>Be part of a growing community of businesses and creators.</p>
+          <button class="btn btn-light btn-small" id="joinNowBtn">Sign Up Now <span>→</span></button>
+          <div class="watermark">CF</div>
+        </section>
+        <section class="panel trending-panel"><h3>Trending topics</h3><button class="topic">#SmallBusiness <span>2.4k posts</span></button><button class="topic">#Entrepreneurship <span>1.8k posts</span></button><button class="topic">#ProductLaunch <span>960 posts</span></button></section>
+      </aside>
+    </section>
+
+    <section class="about-strip" id="about"><div><span class="eyebrow">THE COREFAIR COMMUNITY</span><h2>Good businesses grow better together.</h2></div><p>Bring your ideas, products and people together in one place. CoreFair is designed to help your business get seen and stay connected.</p></section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <a class="brand footer-brand" href="#"><img src="assets/corefair-logo.png" alt=""><span>CoreFair</span></a>
+    <p>Your Business. Your Posts. Your Community.</p>
+    <nav><a href="#home">Home</a><a href="#posts">Posts</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <div class="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="YouTube">▶</a></div>
+    <small>© <span id="year"></span> CoreFair. All rights reserved.</small>
+  </footer>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <!-- Supabase JS v2 client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
