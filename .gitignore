@@ -1,0 +1,9 @@
+# Secrets / local settings
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
