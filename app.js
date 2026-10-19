@@ -3,8 +3,8 @@
  Configure Supabase project URL and anon/publishable key below.
  NEVER place a service_role key in browser code.
 */
-const SUPABASE_URL = "sb_publishable_9lzPxS-uKXnufQOqkk04TA_e2-x3CAa";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6d3BqZXJqZXBmYnZtcnJpaHVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIwNjM2ODEsImV4cCI6MjEwNzYzOTY4MX0.n4_JiwKiB6cCW1oDMbiJvutJZa56rjoV8bM1LJQfkVo";
+const SUPABASE_URL = "https://yzwpjerjepfbvmrrihus.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_9lzPxS-uKXnufQOqkk04TA_e2-x3CAa";
 
 let sb = null;
 if (window.supabase && SUPABASE_URL && SUPABASE_ANON_KEY) sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
