@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071728"><title>Sign in — CoreFair</title><link rel="icon" href="/assets/corefair-logo.png"><link rel="stylesheet" href="/styles.css">
+<style>
+.login-page{min-height:100vh;background:radial-gradient(circle at 80% 20%,#10385a 0,transparent 34%),#071728;display:grid;place-items:center;padding:28px}
+.login-wrap{width:min(100%,460px)}.login-brand{display:flex;justify-content:center;margin-bottom:24px}.login-brand .brand{color:#fff}.login-card{background:#fff;border-radius:22px;padding:34px;box-shadow:0 24px 80px #0004}.login-card h1{font-size:30px;margin:8px 0}.login-card p{color:#63778c;line-height:1.6}.login-card label{display:block;font-size:14px;font-weight:600;margin:16px 0 7px}.login-card input{width:100%;padding:13px 14px;border:1px solid #d9e2ed;border-radius:10px;font:inherit}.login-card .button{width:100%;margin-top:18px;justify-content:center}.login-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#f1f5f9;padding:5px;border-radius:12px;margin:22px 0}.login-tabs button{border:0;border-radius:9px;padding:10px;background:transparent;cursor:pointer}.login-tabs button.active{background:#fff;box-shadow:0 1px 5px #0001;font-weight:700}.login-message{min-height:22px;font-size:14px;margin-top:12px}.back-home{text-align:center;margin-top:20px}.back-home a{color:#b7d8ff}.login-note{font-size:12px!important}
+</style></head>
+<body class="login-page"><div class="login-wrap">
+<div class="login-brand"><a class="brand" href="/"><img src="/assets/corefair-logo.png" alt="CoreFair logo"><span>CoreFair<small>CREATIVE MARKETPLACE</small></span></a></div>
+<section class="login-card"><label>WELCOME TO COREFair</label><h1 id="title">Sign in to CoreFair</h1><p>Sign in to explore creative assets, publish your work, and manage your account.</p>
+<div class="login-tabs"><button id="signinTab" class="active" type="button">Sign in</button><button id="signupTab" type="button">Create account</button></div>
+<form id="loginForm"><label for="email">Email address</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+<label for="password">Password</label><input id="password" type="password" minlength="8" autocomplete="current-password" placeholder="At least 8 characters" required>
+<p id="message" class="login-message" role="status"></p><button class="button button-blue" id="submitBtn" type="submit">Sign in →</button></form>
+<p class="login-note">Never share your password with anyone. Account access is verified by Supabase.</p></section>
+<div class="back-home"><a href="/">← Back to CoreFair home</a></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/login.js"></script></body></html>

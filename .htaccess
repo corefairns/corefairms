@@ -1,0 +1,16 @@
+Options -MultiViews
+RewriteEngine On
+
+# Dedicated pages
+RewriteRule ^login/?$ login.html [L]
+RewriteRule ^explore/?$ explore.html [L]
+RewriteRule ^stock-footage/?$ stock-footage.html [L]
+RewriteRule ^create/?$ create.html [L]
+RewriteRule ^creators/?$ creators.html [L]
+RewriteRule ^plans/?$ plans.html [L]
+RewriteRule ^how-it-works/?$ how-it-works.html [L]
+
+# Serve real files and folders normally
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
